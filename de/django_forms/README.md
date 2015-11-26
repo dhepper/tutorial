@@ -129,9 +129,7 @@ Wir müssen eine Datei `post_edit.html` im Verzeichnis `blog/templates/blog` ers
 *   wir benötigen einen `Save` Button. Wir machen das mit einem HTML button: `<button type="submit">Save</button>`
 *   und schließlich nach dem öffnenden `<form ...>` Tag müssen wir hinzufügen `{% raw %}{% csrf_token %}{% endraw %}`. Dies ist sehr wichtig, da es deine Formulare sicher macht! Django wird sich beschweren wenn du dies vergißt und versuchst das Formular zu speichern:
 
-![CSFR Forbidden page][1]
-
- [1]: images/csrf2.png
+![CSFR Forbidden page](images/csrf2.png)
 
 O.k., also mal sehen, wie der HTML-Code in `post_edit.html` aussehen sollte:
 
@@ -149,9 +147,7 @@ O.k., also mal sehen, wie der HTML-Code in `post_edit.html` aussehen sollte:
 
 Zeit zu aktualisieren! Yay! Das Formular wird angezeigt!
 
-![Neues Formular][2]
-
- [2]: images/new_form2.png
+![Neues Formular](images/new_form2.png)
 
 Aber warte mal eine Minute! Wenn du irgendetwas eintippst in das `title` oder `text` Feld und versuchst zu speichern - was wird wohl passieren?
 
@@ -243,17 +239,13 @@ Jetzt zeigen wir dir wie cool Django Formulare sind. Ein Blog Post muss `title` 
 
 Versuch das Formular ohne `title` und `text` zu speichern. Rate, was passieren wird!
 
-![Formularvalidierung][3]
-
- [3]: images/form_validation2.png
+![Formularvalidierung](images/form_validation2.png)
 
 Django kümmert sich darum sicherzustellen, dass alle Felder in unserem Formular richtig sind. Ist das nicht großartig?
 
 > Da wir vor Kurzem das Django Admin Interface benutzt haben, denkt das System, dass wir noch angemeldet sind. Es gibt einige Situationen, welche dazu führen können, dass wir ausgelogged werden (Schließen des Browsers, Neustarten der Datenbank etc). Wenn du feststellst, dass du Fehlermeldungen bei der Post Erstellung bekommst, die auf nicht angemeldete Nutzer zurückzuführen ist dann gehe zu der Admin Seite http://127.0.0.1:8000/admin und logge dich erneut ein. Dies wird das Problem zeitweise lösen. Es gibt eine permanente Lösung, die auf dich im **Homework: add security to your website!** Kapitel nach dem Haupttutorial wartet.
 
-![Logged in error][4]
-
- [4]: images/post_create_error.png
+![Logged in error](images/post_create_error.png)
 
 ## Formular bearbeiten
 
@@ -327,7 +319,7 @@ Ok, lass uns mal schauen ob das funktioniert! Gehe auf die `post_detail` Seite. 
 
 Wenn du darauf klickst, siehst du das Formular mit unserem Blog Post:
 
-![Formular bearbeiten][5]
+![Formular bearbeiten](images/edit_form2.png)
 
 Zöger nicht den Titel oder den Text zu ändern und die Änderungen zu speichern!
 
@@ -370,7 +362,7 @@ Mal sehen, ob all dies auf PythonAnywhere funktioniert. Zeit für ein weiteres B
     $ git push
     
 
-*   Dann, in einer [PythonAnywhere Bash Konsole][6]:
+*   Dann, in einer [PythonAnywhere Bash Konsole](https://www.pythonanywhere.com/consoles/):
 
     $ cd my-first-blog 
     $ source myvenv/bin/activate 
@@ -380,10 +372,7 @@ Mal sehen, ob all dies auf PythonAnywhere funktioniert. Zeit für ein weiteres B
     [...]
     
 
-*   Springe zum Ende noch schnell auf den [Web tab][7] und klicke auf **Reload**.
+*   Springe zum Ende noch schnell auf den [Web tab](https://www.pythonanywhere.com/web_app_setup/) und klicke auf **Reload**.
 
 Und das war's! Glückwunsch :)
 
- [5]: images/edit_form2.png
- [6]: https://www.pythonanywhere.com/consoles/
- [7]: https://www.pythonanywhere.com/web_app_setup/

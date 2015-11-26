@@ -6,9 +6,7 @@ Wie sind dabei unsere erste Website zu machen --eine Homepage für unseren Blog!
 
 Die URL ist einfach eine Web-Adresse. Du kannst eine URL sehen, jedes Mal, wenn du eine Website besuchst - es ist in der Adressleiste des Browsers sichtbar (ja! `127.0.0.1:8000` ist eine URL! Und `https://djangogirls.com` ist auch eine URL):
 
-![Url][1]
-
- [1]: images/url.png
+![Url](images/url.png)
 
 Jede Seite im Internet braucht seine eigene URL. Dadurch weiß dein Browser was sie dem Nutzer, der eine URL öffnet, zeigen soll. In Django verwenden wir eine sogenannte `URLconf` (URL Konfiguration). URLconf ist eine Ansammlung von Mustern, die Django versuchen wird mit der empfangenen URL in Übereinstimmung zu bringen, um die richtige View zu finden.
 
@@ -114,9 +112,7 @@ Der letzte Teil `name='post_list'` ist der Name der URL, die genutzt wird den 'v
 
 Alles klar? Öffne http://127.0.0.1:8000/ in deinem Browser um das Ergebnis zu sehen.
 
-![Fehler][2]
-
- [2]: images/error1.png
+![Fehler](images/error1.png)
 
 Dort steht nicht mehr "It works"? Keine Sorge, es ist nur eine Fehler Seite. Nichts wovor man Angst haben muss! Sie sind eigentlich sehr hilfreich:
 

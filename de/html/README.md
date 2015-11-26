@@ -31,9 +31,7 @@ Kontrolliere deine überarbeitete Webseite unter: http://127.0.0.1:8000
 
 > Falls Du die Fehlermeldung `TemplateDoesNotExists` angezeigt bekommst, versuche den Server neu zu starten. Öffne die Konsole, stoppe den Server mit Strg+C (Steuerung and C Tasten zusammen drücken) und starte ihn neu mit dem `python manage.py runserver` Kommando.
 
-![Abbildung 11.1][1]
-
- [1]: images/step1.png
+![Abbildung 11.1](images/step1.png)
 
 Der Fehler sollte weg sein! Toll :) Deine Webseite ist allerdings noch leer, weil dein Template leer ist. Das müssen wir ändern.
 
@@ -48,9 +46,7 @@ Füge folgenden Text in deine Template-Datei ein:
 
 Hat sich die Seite geändert? Sieh nach: http://127.0.0.1:8000/
 
-![Abbildung 11.2][2]
-
- [2]: images/step3.png
+![Abbildung 11.2](images/step3.png)
 
 Es funktioniert? Gute Arbeit! :)
 
@@ -83,9 +79,7 @@ In den `<head>` können wir z.B. noch den Titel (title) der Seite mit aufnehmen:
 
 Speichere die Datei und aktualisiere die Seite im Browser.
 
-![Abbildung 11.3][3]
-
- [3]: images/step4.png
+![Abbildung 11.3](images/step4.png)
 
 Der Titel "Ola's blog" wird nun im Browser angezeigt. Hast du es bemerkt? Der Browser hat `<title>Ola's blog</title>` interpretiert und in die Titelleiste übernommen (dieser Titel wird auch in den Lesezeichen usw. verwendet).
 
@@ -143,7 +137,7 @@ Wir haben hier drei verschiedene `div` Abschnitte erstellt.
 
 Wir bekommen das Folgende:
 
-![Abbildung 11.4][4]
+![Abbildung 11.4](images/step6.png)
 
 Yaaay! Bis jetzt zeigt unser Template aber immer genau die **gleichen Inhalte** - wobei wir aber vorhin davon gesprochen haben, dass Templates uns erlauben **verschiedene** Informationen im **gleichen Format** darzustellen.
 
@@ -186,7 +180,7 @@ Nachdem wir das gemacht haben, laden (push) wir unsere Änderungen auf GitHub:
 
 ### Zieh dir neuen Code runter auf PythonAnywhere und lade deinen Browser neu.
 
-*   Öffne die [PythonAnywhere consoles page][5] und gehe zu deiner **Bash Konsole** (oder starte eine neue). Dann, führe folgendes aus:
+*   Öffne die [PythonAnywhere consoles page](https://www.pythonanywhere.com/consoles/) und gehe zu deiner **Bash Konsole** (oder starte eine neue). Dann, führe folgendes aus:
 
     $ cd ~/my-first-blog 
     $ source myvenv/bin/activate 
@@ -198,10 +192,7 @@ Nachdem wir das gemacht haben, laden (push) wir unsere Änderungen auf GitHub:
 
 Und schau zu wie dein Code runtergeladen wird. Wenn du prüfen willst ob der Code angekommen ist, kannst du zum **Files tab** rüberspringen und deinen Code auf PythonAnywhere sehen.
 
-*   Springe schließlich rüber zum [Web tab][6] und klick auf **Neu laden** in deinem Browser.
+*   Springe schließlich rüber zum [Web tab](https://www.pythonanywhere.com/web_app_setup/) und klick auf **Neu laden** in deinem Browser.
 
 Dein Update sollte live sein! Lade die Seite neu in deinem Browser. Änderungen sollten nun sichtbar sein. :)
 
- [4]: images/step6.png
- [5]: https://www.pythonanywhere.com/consoles/
- [6]: https://www.pythonanywhere.com/web_app_setup/

@@ -25,9 +25,7 @@ Um Bootstrap zu installieren, musst du dies in den `<head>` in deine `HTML`-Date
 
 Dies fügt deinem Projekt keine Dateien hinzu. Es verweist nur auf Dateien, die im Internet vorhanden sind. Öffne und aktualisiere deine Webseite. Da ist sie!
 
-![Abbildung 14.1][1]
-
- [1]: images/bootstrap1.png
+![Abbildung 14.1](images/bootstrap1.png)
 
 Sie sieht jetzt schon viel schöner aus!
 
@@ -63,13 +61,9 @@ Nun erstellen wir eine CSS-Datei, um deiner Website deinen eigenen Stil zu verle
 
 Zeit ein wenig CSS zu schreiben! Öffne die `blog/static/css/blog.css` Datei in Deinem Code Editor.
 
-Wir werden hier nicht in die Tiefe von CSS gehen und die individuelle Anpassung lernen. CSS ist relativ einfach und Du kannst das nach diesem Workshop alleine vertiefen. Wir empfehlen diesen [Codeacademy HTML & CSS-Kurs][2]. Da kannst du alles lernen, was Du wissen musst um deine Website mit CSS schöner zu machen.
+Wir werden hier nicht in die Tiefe von CSS gehen und die individuelle Anpassung lernen. CSS ist relativ einfach und Du kannst das nach diesem Workshop alleine vertiefen. Wir empfehlen diesen [Codeacademy HTML & CSS-Kurs](http://www.codecademy.com/tracks/web). Da kannst du alles lernen, was Du wissen musst um deine Website mit CSS schöner zu machen.
 
- [2]: http://www.codecademy.com/tracks/web
-
-Aber lass' uns zumindest ein wenig machen. Beispielsweise könnten wir die Farbe unserer Kopfzeile ändern. Computer benutzen spezielle Codes, um Farben zu verstehen. Ein solcher Code beginnt mit einer `#`, gefolgt von 6 Buchstaben (A-F) und Zahlen (0-9). Beispiele für solche Farbcodes findest Du hier: http://www.colorpicker.com/. Du kannst auch [vordefinierte Farben][3] wie `red` und `green` benutzen.
-
- [3]: http://www.w3schools.com/cssref/css_colornames.asp
+Aber lass' uns zumindest ein wenig machen. Beispielsweise könnten wir die Farbe unserer Kopfzeile ändern. Computer benutzen spezielle Codes, um Farben zu verstehen. Ein solcher Code beginnt mit einer `#`, gefolgt von 6 Buchstaben (A-F) und Zahlen (0-9). Beispiele für solche Farbcodes findest Du hier: http://www.colorpicker.com/. Du kannst auch [vordefinierte Farben](http://www.w3schools.com/cssref/css_colornames.asp) wie `red` und `green` benutzen.
 
 In Deiner `blog/static/css/blog.css` Datei änderst Du den folgenden Code:
 
@@ -87,9 +81,7 @@ In einer CSS-Datei werden Styles für Elemente der HTML-Datei festgelegt. Die El
     <a href="http://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">
     
 
-Weitere Informationen siehe [CSS-Selektoren in w3schools][4].
-
- [4]: http://www.w3schools.com/cssref/css_selectors.asp
+Weitere Informationen siehe [CSS-Selektoren in w3schools](http://www.w3schools.com/cssref/css_selectors.asp).
 
 Dann musst Du auch Deiner HTML-Vorlage sagen, dass wir CSS aus einer externen Datei laden wollen. Öffne dazu die Datei `blog/templates/blog/post_list.html` und füge folgende Zeile ganz am Anfang der Datei an:
 
@@ -133,9 +125,7 @@ Deine Datei sieht jetzt folgendermaßen aus:
 
 Ok, speicher die Datei und lade die Seite neu!
 
-![Abbildung 14.2][5]
-
- [5]: images/color2.png
+![Abbildung 14.2](images/color2.png)
 
 Gut gemacht! Vielleicht wollen wir unserer Webseite etwas mehr Luft geben, indem wir den Abstand auf der linken Seite vergrößern? Probieren wir es aus!
 
@@ -147,9 +137,7 @@ Gut gemacht! Vielleicht wollen wir unserer Webseite etwas mehr Luft geben, indem
 
 Füge dies zu Deinem CSS hinzu, speicher die Datei und guck Dir die Veränderung an!
 
-![Abbildung 14.3][6]
-
- [6]: images/margin2.png
+![Abbildung 14.3](images/margin2.png)
 
 Vielleicht können wir auch die Schrift in unserem HTML-Kopf anpassen? Füge dies zu `<head>` in `blog/templates/blog/post_list.html`hinzu:
 
@@ -168,9 +156,7 @@ Nun füge die Zeile `font-family: 'Lobster';` in die CSS-Datei `blog/static/css/
     }
     
 
-![Abbildung 14.3][7]
-
- [7]: images/font.png
+![Abbildung 14.3](images/font.png)
 
 Super!
 
@@ -280,14 +266,12 @@ in `blog/templates/blog/post_list.html` durch diesen:
 
 Speichere die geänderten Dateien und aktualisiere die Webseite.
 
-![Abbildung 14.4][8]
-
- [8]: images/final.png
+![Abbildung 14.4](images/final.png)
 
 Und?! Sieht viel besser aus, oder!? Der verwendete Code ist nicht allzu schwer zu verstehen. Wenn Du ihn liest, sollte schon fast alles klar sein.
 
 Ändere ruhig das eine oder andere im CSS und probiere ein paar Sachen aus. Geht etwas kaputt, mach deine Änderungen im Editor rückgängig und starte von vorn.
 
-Wir empfehlen den freien Online-Kurs [Codeacademy HTML & CSS course][2] als Hausaufgabe. So kannst Du alles lernen, was Du über das Verschönern von Webseiten mit CSS wissen willst.
+Wir empfehlen den freien Online-Kurs [Codeacademy HTML & CSS course](http://www.codecademy.com/tracks/web) als Hausaufgabe. So kannst Du alles lernen, was Du über das Verschönern von Webseiten mit CSS wissen willst.
 
 Bereit für das nächste Kapitel? :)

@@ -261,9 +261,7 @@ Hier ist eine Zusammenfassung einiger nützlicher Kommandos:
 
 Das sind nur sehr wenige der Befehle, welche du in deiner Konsole verwenden kannst, aber du wirst heute nicht mehr brauchen.
 
-Falls du neugierig bist, findest du auf [ss64.com][1] eine vollständige Übersicht über alle Kommandozeilen-Befehle für alle Betriebssysteme.
-
- [1]: http://ss64.com
+Falls du neugierig bist, findest du auf [ss64.com](http://ss64.com) eine vollständige Übersicht über alle Kommandozeilen-Befehle für alle Betriebssysteme.
 
 ## Fertig?
 

@@ -28,9 +28,7 @@ Und als nächstes? Um tatsächlich Blog Posts aus dem `Post` Model anzusprechen 
 
 ## QuerySet
 
-Dir sollte jetzt schon ungefähr wissen, wie QuerySets funktionieren. Wir haben darüber im Kapitel [Django ORM (QuerySets)][1] gesprochen.
-
- [1]: ../django_orm/README.md
+Dir sollte jetzt schon ungefähr wissen, wie QuerySets funktionieren. Wir haben darüber im Kapitel [Django ORM (QuerySets)](../django_orm/README.md) gesprochen.
 
 Wir wollen nun also eine Liste von von Blog Posts die publiziert und nach `published_date` sortiert sind, oder? Das haben wir bereits im Kapitel QuerySets gemacht!
 

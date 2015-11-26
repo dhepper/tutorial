@@ -29,9 +29,7 @@ Speichere die Datei, öffne http://127.0.0.1:8000/ im Browser und schau nach was
 
 Einen anderen Fehler! Lies dir durch was da steht:
 
-![Fehler][1]
-
- [1]: images/error.png
+![Fehler](images/error.png)
 
 Der ist logisch: *TemplateDoesNotExist*. Wir haben ja noch kein Template erstellt. Lass uns diesen Bug im nächsten Kapitel beheben!
 

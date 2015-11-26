@@ -15,9 +15,7 @@ Wie du siehst, importieren wir hier das Model "Post", das wir im vorigen Kapitel
 
 Okay, wir sehen uns nun unser Post Model an. Denk daran `python manage.py runserver` in die Konsole einzugeben um den Webserver zu starten. Öffne dann deinen Browser und gib die Adresse http://127.0.0.1:8000/admin/ ein. Du solltest nun eine Login Seite wie diese sehen:
 
-![Anmeldeseite][1]
-
- [1]: images/login_page2.png
+![Anmeldeseite](images/login_page2.png)
 
 Um dich einzuloggen, musst du einen *superuser* erzeugen - einen Benutzer, welcher Kontrolle über Alles auf der Site hat. Gehe zurück zu der Kommandozeile und tippe ein `python manage.py createsuperuser`, und drücke Enter. Wenn aufgefordert, tippe dienen Benutzernamen ein (Kleinbuchstaben, keine Leerzeichen), Email Adresse und Password. Keine Sorge, dass du das Passwort nicht siehst, das du gerade eingibst - das soll so sein. Tippe es einfach ein und drücke `enter` um fortzufahren. Du solltest nun folgendes sehen (wobei Username und Email deine sein sollten):
 
@@ -31,17 +29,13 @@ Um dich einzuloggen, musst du einen *superuser* erzeugen - einen Benutzer, welch
 
 Geh nochmal in deinen Browser und log dich mit den Daten des Superusers ein, den du gerade erstellt hast. Du solltest nun das Django Admin Dashboard sehen.
 
-![Django Administration][2]
-
- [2]: images/django_admin3.png
+![Django Administration](images/django_admin3.png)
 
 Gehe zu Posts und experimentiere ein wenig damit. Füge 5 oder 6 Blog Posts hinzu. Mach dir keine Sorgen wegen des Inhalts - du kannst einfach etwas Text aus diesem Tutorial kopieren und einfügen um Zeit zu sparen :-).
 
 Ein paar Beiträge (aber nicht alle!) sollten das "publish date" (Veröffentlichungsdatum) gesetzt sein. Das wird uns später helfen.
 
-![Django Administration][3]
-
- [3]: images/edit_post3.png
+![Django Administration](images/edit_post3.png)
 
 Wenn du mehr über Django Admin wissen willst solltest du dir hier die Django Dokumentation ansehen: https://docs.djangoproject.com/en/1.8/ref/contrib/admin/
 

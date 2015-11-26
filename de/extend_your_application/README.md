@@ -41,9 +41,7 @@ Wir beginnen damit einen Link in der `blog/templates/blog/post_list.html` Datei 
 
 Wenn wir jetzt auf http://127.0.0.1:8000/ gehen, bekommen wir einen Fehler (so wie erwartet, da wir ja noch keine URL oder *view* für `post_detail` haben). Er wird folgendermaßen aussehen:
 
-![NoReverseMatch error][1]
-
- [1]: images/no_reverse_match2.png
+![NoReverseMatch error](images/no_reverse_match2.png)
 
 ## Erstelle eine URL zu einem post's detail
 
@@ -71,9 +69,7 @@ Also wenn du `http://127.0.0.1:8000/post/5/` in deinen Browser eingibst, wird Dj
 
 Ok, wir haben ein neues URL Muster zu der Datei `blog/urls.py` hinzugefügt! Lass uns die Seite http://127.0.0.1:8000/ aktualisieren. Boom! Erneut ein Fehler! Wie erwartet!
 
-![AttributeError][2]
-
- [2]: images/attribute_error2.png
+![AttributeError](images/attribute_error2.png)
 
 Erinnerst du dich das was der nächste Schritt ist? Natürlich: einen View hinzufügen!
 
@@ -88,15 +84,11 @@ Jetzt wollen wir also genau einen Blog Eintrag. Wir könbnen dies erreichen inde
 
 Aber bei diesem Code gibt es ein Problem. Wenn `Post` keinen `primary key` (`pk`) hat bekommen wir einen schlimmen Fehler!
 
-![DoesNotExist error][3]
-
- [3]: images/does_not_exist2.png
+![DoesNotExist error](images/does_not_exist2.png)
 
 Das wollen wir nicht! Aber natürlich stellt uns Django etwas zur Verfügung um dieses Problem zu umgehen: `get_object_or_404`. Wenn es keinen `Post` mit einem gegebenen `pk` gibt wird er eine schönere Seite anzeigen (die sogenannte `Page Not Found 404` Seite).
 
-![Page not found][4]
-
- [4]: images/404_2.png
+![Page not found](images/404_2.png)
 
 Die gute Neuigkeit ist, dass du auch deine eigene `Page not found` (Seite nicht gefunden) Seite machen kannst und diese so hübsch machen kannst, wie du willst. Aber da das gerade nicht so wichtig ist, überspringen wir das erstmal.
 
@@ -116,15 +108,11 @@ Bei den anderen `from` Zeilen. Am Ende der Datei fügen wir unseren *view* hinzu
 
 Super. Lass uns nun http://127.0.0.1:8000/ aktualisieren.
 
-![Post list view][5]
-
- [5]: images/post_list2.png
+![Post list view](images/post_list2.png)
 
 Es hat funktioniert! Aber was passiert, wenn du auf den Link im Blog Titel klickst?
 
-![TemplateDoesNotExist error][6]
-
- [6]: images/template_does_not_exist2.png
+![TemplateDoesNotExist error](images/template_does_not_exist2.png)
 
 Oh nein! Ein anderer Fehler! Aber wir wissen ja schon, wie wir mit diesem umgehen, oder? Wir müssen ein Template hinzufügen!
 
@@ -156,9 +144,7 @@ Wir erweitern wieder `base.html`. Im `content`Block wollen wir das Publikationsd
 
 Okay, wir aktualisieren die Seite und sehen, dass `Page not found` nun weg ist.
 
-![Post detail page][7]
-
- [7]: images/post_detail2.png
+![Post detail page](images/post_detail2.png)
 
 Yeah! Es funktioniert!
 
@@ -173,9 +159,7 @@ Es wäre schön zu sehen, ob deine Website noch auf PythonAnywhere funktioniert,
     $ git push
     
 
-*   Dann, in einer [PythonAnywhere Bash Konsole][8]:
-
- [8]: https://www.pythonanywhere.com/consoles/
+*   Dann, in einer [PythonAnywhere Bash Konsole](https://www.pythonanywhere.com/consoles/):
 
     $ cd my-first-blog 
     $ source myvenv/bin/activate 
@@ -185,8 +169,6 @@ Es wäre schön zu sehen, ob deine Website noch auf PythonAnywhere funktioniert,
     [...]
     
 
-*   Springe zum Ende noch schnell auf den [Web tab][9] und klicke auf **Reload**.
-
- [9]: https://www.pythonanywhere.com/web_app_setup/
+*   Springe zum Ende noch schnell auf den [Web tab](https://www.pythonanywhere.com/web_app_setup/) und klicke auf **Reload**.
 
 Und das war's! Glückwunsch :)

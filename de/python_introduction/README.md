@@ -6,9 +6,7 @@ Fangen wir an, schreiben wir Code!
 
 ## Der Python Prompt
 
-Um Python zu starten, musst du an die *Konsole* deines Computers. Wie das geht weißt du bereits -- denn du hast es im Kapitel [Einführung in die Konsole][1] bereits durchgenommen.
-
- [1]: ../intro_to_command_line/README.md
+Um Python zu starten, musst du an die *Konsole* deines Computers. Wie das geht weißt du bereits -- denn du hast es im Kapitel [Einführung in die Konsole](../intro_to_command_line/README.md) bereits durchgenommen.
 
 Also öffne die Konsole, dann fangen wir an.
 
@@ -458,9 +456,7 @@ Um den Python Interpreter zu beenden, nutze einfach die ~~~ exit()~~~ Funktion:
 
 Nun siehst du wieder den normalen Kommandozeilen-Prompt.
 
-Ein paar Kapitel zuvor hatten wir uns bereits einen [Code-Editor][2] ausgesucht. Diesen öffnest du nun und gibst Folgendes ein:
-
- [2]: ../code_editor/README.md
+Ein paar Kapitel zuvor hatten wir uns bereits einen [Code-Editor](../code_editor/README.md) ausgesucht. Diesen öffnest du nun und gibst Folgendes ein:
 
     python
     print('Hello, Django girls!')
@@ -779,6 +775,5 @@ Das ist alles. **You totally rock!** Das war ein heikles Kapitel darum solltest 
 
 Du möchtest jetzt vielleicht kurz etwas anderes tun - stretchen, etwas herumlaufen, deine Augen ausruhen - bevor es wetier zum nächsten Kapitel geht. :)
 
-![Cupcake][3]
+![Cupcake](images/cupcake.png)
 
- [3]: images/cupcake.png

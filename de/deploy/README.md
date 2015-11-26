@@ -4,13 +4,9 @@
 
 Bis jetzt lief die Website nur auf deinem Computer, jetzt wollen wir sie veröffentlichen (deploy)! Deploy bedeutet, dass Du Deine Applikation im Internet veröffentlichst, so dass endlich jeder darauf zugreifen kann :).
 
-Wie Du ja schon gelernt hast, muss eine Webseite auf einem Server liegen. Es sind eine Menge Server Anbieter im Internet verfügbar. Wir werden einen verwenden, der einen relativ einfachen Veröffentlichungsprozess (deployment process) hat: [PythonAnywhere][1]. PythonAnywhere ist kostenlos für kleine Anwendungen, die nicht von vielen Besuchern aufgerufen werden. Also erstmal genau das richtige für dich.
+Wie Du ja schon gelernt hast, muss eine Webseite auf einem Server liegen. Es sind eine Menge Server Anbieter im Internet verfügbar. Wir werden einen verwenden, der einen relativ einfachen Veröffentlichungsprozess (deployment process) hat: [PythonAnywhere](http://pythonanywhere.com/). PythonAnywhere ist kostenlos für kleine Anwendungen, die nicht von vielen Besuchern aufgerufen werden. Also erstmal genau das richtige für dich.
 
- [1]: http://pythonanywhere.com/
-
-Als weiteren externen Dienst werden wir [GitHub][2] nutzen, einen "Code Hosting"-Dienst. Es gibt noch andere solcher Dienste, aber die meisten Programmierer haben heute ein Konto bei Github, und du gleich auch!
-
- [2]: http://www.github.com
+Als weiteren externen Dienst werden wir [GitHub](http://www.github.com) nutzen, einen "Code Hosting"-Dienst. Es gibt noch andere solcher Dienste, aber die meisten Programmierer haben heute ein Konto bei Github, und du gleich auch!
 
 GitHub wird unsere Basis für die Übertragung unseres Code von und nach PythonAnywhere sein.
 
@@ -82,21 +78,17 @@ Und nun speichern wir unsere Änderungen mit diesen Kommandos:
 
 ## Den Code nach GitHub schieben
 
-Öffne [GitHub.com][2] und registriere dich für ein neues, kostenloses Benutzerkonto. (Wenn du das bereits in deiner Vorbereitung auf dem Workshop getan hast, dann ist das großartig!)
+Öffne [GitHub.com](http://www.github.com) und registriere dich für ein neues, kostenloses Benutzerkonto. (Wenn du das bereits in deiner Vorbereitung auf dem Workshop getan hast, dann ist das großartig!)
 
 Danach erstelle ein neues Repository und gib ihm den Namen "my-first-blog". Lass den Schalter "initialise with a README" deaktiviert, die Einstellung der Option .gitignore frei (das haben wir schon von Hand gemacht) und lass die Lizenz auf "None".
 
-![][3]
-
- [3]: images/new_github_repo.png
+![](images/new_github_repo.png)
 
 > **Achtung** Der Name `my-first-blog` ist wichtig - du kannst einen anderen wählen, aber er wird im folgenden noch so oft vorkommen, dass du immer daran denken musst, in entsprechend in den Anweisungen anzupassen. Lass es erst mal bei `my-first-blog`.
 
 Auf der nächsten Seite wird dir die Clone URL des Repos angezeigt. Nimm die HTTPS-Variante, kopiere sie und füge sie in der Konsole ein:
 
-![][4]
-
- [4]: images/github_get_repo_url_screenshot.png
+![](images/github_get_repo_url_screenshot.png)
 
 Nun müssen wir das Git Repository auf deinem Computer mit dem auf GitHub verbinden.
 
@@ -120,10 +112,7 @@ Gibt deinen GitHub Benutzernamen und dein Passwort ein und du solltest etwas äh
 
 <!--TODO: maybe do ssh keys installs in install party, and point ppl who dont have it to an extention -->
 
-Dein Code ist jetzt auf GitHub. Guck es dir dort mal an! Dort bist du in guter Gesellschaft - [Django][5], das [Django Girls Tutorial][6] und viele andere großartige Open Source Software-Projekte haben ihren Code auf GitHub :)
-
- [5]: https://github.com/django/django
- [6]: https://github.com/DjangoGirls/tutorial
+Dein Code ist jetzt auf GitHub. Guck es dir dort mal an! Dort bist du in guter Gesellschaft - [Django](https://github.com/django/django), das [Django Girls Tutorial](https://github.com/django/django) und viele andere großartige Open Source Software-Projekte haben ihren Code auf GitHub :)
 
 # Dein Blog auf PythonAnywhere aufsetzen
 
@@ -246,9 +235,7 @@ Nach der Bestätigung deines Domain Namens, wähle **manual configuration** (NB 
 
 Du wirst weitergeleitet auf den PythonAnywhere Konfigurationsschirm für deine Webapp. Dies ist wohin du gehen musst wann immer du Änderungen an deiner App auf dem Server vornehmen willst.
 
-![][7]
-
- [7]: images/pythonanywhere_web_tab_virtualenv.png
+![](images/pythonanywhere_web_tab_virtualenv.png)
 
 In der "Virtualenv" Sektion, klicke auf den roten Text, welcher sagt:"Enter the path to a virtualenv" und gebe ein: `/home/<your-username>/my-first-blog/myvenv/`. Klicke auf die blaue Box mit dem Häkchen um den Pfad zu speichern bevor es weitergeht.
 
@@ -287,9 +274,7 @@ Wir sind fertig! Drücke auf den großen grünen **Reload** Knopf und du kannst 
 
 ## Debugging Tipps
 
-Falls du einen Fehler, beim Versuch deine Seite zu besuchen, siehst, ist der erste Ort an dem man nach Debugging Infos schauen sollte dein **error log**. Sie finden einen Link dazu auf dem PythonAnywhere [Web tab][8]. Schaue nach ob Fehlermeldungen enthalten sind; die neuesten sind unten. Häufige Probleme sind:
-
- [8]: https://www.pythonanywhere.com/web_app_setup/
+Falls du einen Fehler, beim Versuch deine Seite zu besuchen, siehst, ist der erste Ort an dem man nach Debugging Infos schauen sollte dein **error log**. Sie finden einen Link dazu auf dem PythonAnywhere [Web tab](https://www.pythonanywhere.com/web_app_setup/). Schaue nach ob Fehlermeldungen enthalten sind; die neuesten sind unten. Häufige Probleme sind:
 
 *   Einen der Schritte vergessen, die wir in der Konsole gemacht haben: das virtualenv kreieren, es aktivieren, Django in es zu installieren, collectstatic auszuführen, die Datenbank zu migrieren.
 
@@ -299,9 +284,7 @@ Falls du einen Fehler, beim Versuch deine Seite zu besuchen, siehst, ist der ers
 
 *   Hast du die selbe Version von Python für dein virtualenv gewählt wie für deine Web App? Beide sollten 3.4 sein.
 
-*   Es gibt einige [general debugging tips on the PythonAnywhere wiki][9].
-
- [9]: https://www.pythonanywhere.com/wiki/DebuggingImportError
+*   Es gibt einige [general debugging tips on the PythonAnywhere wiki](https://www.pythonanywhere.com/wiki/DebuggingImportError).
 
 Und denk dran, dein Coach ist da um dir zu helfen!
 

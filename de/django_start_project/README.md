@@ -2,9 +2,7 @@
 
 > Teile dieses Kapitels basieren auf den Tutorials der Geek Girls Carrots (http://django.carrots.pl/).
 > 
-> Teile dieses Kapitels basieren auf dem [Django-Marcador Lernprogramm][1] lizenziert unter Creative Commons Attribution-ShareAlike 4.0 International License. Für das "django-marcador tutorial" liegt das Urheberrecht bei Markus Zapke-Gründemann u.a.
-
- [1]: http://django-marcador.keimlink.de/
+> Teile dieses Kapitels basieren auf dem [Django-Marcador Lernprogramm](http://django-marcador.keimlink.de/) lizenziert unter Creative Commons Attribution-ShareAlike 4.0 International License. Für das "django-marcador tutorial" liegt das Urheberrecht bei Markus Zapke-Gründemann u.a.
 
 Wir werden ein einfaches Blog erstellen.
 
@@ -51,9 +49,7 @@ Lass uns kurz die anderen Dateien vergessen - wir werden sie nicht verändern. D
 
 Wir werden die Einstellungen in `mysite/settings.py` anpassen. Öffne dazu den zuvor installierten Editor.
 
-Es wäre schön wenn die richte Zeit auf deiner Webseite eingestellt ist. Gehe zu der [wikipedia timezones list][2] und kopiere deine zutreffende Zeitzone (time zone, TZ). (z.B. `Europe/Berlin`)
-
- [2]: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+Es wäre schön wenn die richte Zeit auf deiner Webseite eingestellt ist. Gehe zu der [wikipedia timezones list](http://en.wikipedia.org/wiki/List_of_tz_database_time_zones) und kopiere deine zutreffende Zeitzone (time zone, TZ). (z.B. `Europe/Berlin`)
 
 In settings.py finde die Zeile, welche `TIME_ZONE` enthält und ändere sie zu deiner Zeitzone:
 
@@ -129,8 +125,6 @@ Der Webserver wird deine Eingabeaufforderung übernehmen, bis du ihn wieder stop
 
 Glückwunsch! Du hast gerade deine erste Website erstellt und sie auf deinem Webserver laufen! Ist das nicht toll?
 
-![Es hat funktioniert!][3]
-
- [3]: images/it_worked2.png
+![Es hat funktioniert!](images/it_worked2.png)
 
 Bereit für den nächsten Schritt? Es wird Zeit ein paar Inhalte hinzuzufügen!
