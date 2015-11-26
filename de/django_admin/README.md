@@ -4,12 +4,12 @@ Zum hinzufügen, bearbeiten und löschen von Blogposts benutzen wir Django Admin
 
 Öffne die Datei `blog/admin.py` und ersetze den Inhalt wie folgt:
 
-    python
-    from django.contrib import admin
-    from .models import Post
-    
-    admin.site.register(Post)
-    
+```python
+from django.contrib import admin
+from .models import Post
+
+admin.site.register(Post)
+```
 
 Wie du siehst, importieren wir hier das Model "Post", das wir im vorigen Kapitel erstellt haben. Damit unser Model auf der Admin-Seite sichtbar wird, müssen wir es mit `admin.site.register(Post)` registrieren.
 
@@ -25,7 +25,7 @@ Um dich einzuloggen, musst du einen *superuser* erzeugen - einen Benutzer, welch
     Password:
     Password (again):
     Superuser created successfully.
-    
+
 
 Geh nochmal in deinen Browser und log dich mit den Daten des Superusers ein, den du gerade erstellt hast. Du solltest nun das Django Admin Dashboard sehen.
 

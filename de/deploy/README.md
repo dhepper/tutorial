@@ -181,7 +181,7 @@ Hast du dich gefragt was die "whitenoise" Sache war? Es ist ein Werkzeug um so g
 
 Wir werden später im Tutorial ein wenig mehr über statische Dateien erfahren wenn wir das CSS für unsere Site bearbeiten.
 
-Für`s Erste müssen wir nur ein extra Kommando auf dem Server ausführen, genannt `collectstatic`. Es befiehlt Django alle statischen Dateien die es auf dem Server braucht, einzusammeln. Im Moment sind dies hauptsächlich Dateien, welche die Admin Site hübsch aussehen lassen.
+Für's Erste müssen wir nur ein extra Kommando auf dem Server ausführen, genannt `collectstatic`. Es befiehlt Django alle statischen Dateien die es auf dem Server braucht, einzusammeln. Im Moment sind dies hauptsächlich Dateien, welche die Admin Site hübsch aussehen lassen.
 
     (mvenv) $ python manage.py collectstatic
 
@@ -249,20 +249,20 @@ Klicke auf den "WSGI configuration file" Link (in der "Code" Sektion im oberen T
 
 Lösche alle Inhalte und ersetze sie durch etwas wie dies:
 
-    python
-    import os
-    import sys
+```python
+import os
+import sys
 
-    path = '/home/<your-username>/my-first-blog'  # use your own username here
-    if path not in sys.path:
-        sys.path.append(path)
+path = '/home/<your-username>/my-first-blog'  # use your own username here
+if path not in sys.path:
+    sys.path.append(path)
 
-    os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
 
-    from django.core.wsgi import get_wsgi_application
-    from whitenoise.django import DjangoWhiteNoise
-    application = DjangoWhiteNoise(get_wsgi_application())
-
+from django.core.wsgi import get_wsgi_application
+from whitenoise.django import DjangoWhiteNoise
+application = DjangoWhiteNoise(get_wsgi_application())
+```
 
 > **Hinweis** Vergiss nicht deinen Benutzernamen an die Stelle `<your-username>` einzusetzen
 

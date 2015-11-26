@@ -1,7 +1,7 @@
 # Dein erstes Django Projekt!
 
 > Teile dieses Kapitels basieren auf den Tutorials der Geek Girls Carrots (http://django.carrots.pl/).
-> 
+>
 > Teile dieses Kapitels basieren auf dem [Django-Marcador Lernprogramm](http://django-marcador.keimlink.de/) lizenziert unter Creative Commons Attribution-ShareAlike 4.0 International License. Für das "django-marcador tutorial" liegt das Urheberrecht bei Markus Zapke-Gründemann u.a.
 
 Wir werden ein einfaches Blog erstellen.
@@ -15,15 +15,15 @@ Die Namen einiger Dateien und Verzeichnisse sind sehr wichtig für Django. Die D
 In deiner MacOS oder Linux Konsole solltest du den folgenden Befehl ausführen; **vergiss nicht den Punkt `.` am Ende** einzufügen:
 
     (myvenv) ~/djangogirls$ django-admin startproject mysite .
-    
+
 
 Unter Windows; **vergiss nicht den Punkt `.` am Ende** einzufügen:
 
     (myvenv) C:\Users\Name\djangogirls> django-admin startproject mysite .
-    
+
 
 > Der Punkt `.` ist sehr wichtig, weil er dem Skript mitteilt, dass Django in deinem aktuellen Verzeichnis installiert werden soll. (der Punkt `.` ist eine Schnellreferenz dafür)
-> 
+>
 > **Hinweis**Wenn du die oben angegebenen Kommandos eingibst, denk dran, tippe nur das ein, das mit `django-admin` oder `django-admin.py` anfängt. `(myvenv) ~/djangogirls$` und `(myvenv) C:\Users\Name\djangogirls>` sind nur Teile von dem, was dir angezeigt wird in der Eingabeaufforderung, wenn die Konsole auf deine Eingabe wartet.
 
 `django-admin.py` ist ein Skript welches Verzeichnisse und Dateien für dich erstellt. Du solltest jetzt ein Verzeichnis haben, das folgendermaßen aussieht:
@@ -35,7 +35,7 @@ Unter Windows; **vergiss nicht den Punkt `.` am Ende** einzufügen:
             urls.py
             wsgi.py
             __init__.py
-    
+
 
 `manage.py` ist ein Script, das das Management Deines Projekts unterstützt. Mit dem Script bist Du unter anderem in der Lage den Webserver auf Deinem Rechner zu starten, ohne etwas weiteres installieren zu müssen.
 
@@ -53,18 +53,18 @@ Es wäre schön wenn die richte Zeit auf deiner Webseite eingestellt ist. Gehe z
 
 In settings.py finde die Zeile, welche `TIME_ZONE` enthält und ändere sie zu deiner Zeitzone:
 
-    python
-    TIME_ZONE = 'Europe/Berlin'
-    
+```python
+TIME_ZONE = 'Europe/Berlin'
+```
 
 Ändere "Europe/Berlin" wenn zutreffend.
 
 Des Weiteren brauchen wir einen Dateipfad für sogenannte "statische" Dateien (static files). Wir werden später im Tutorial genauer klären, was wir darunter verstehen. Gehe ganz ans Ende der Datei und füge unter `STATIC_URL` einen neuen Eintrag `STATIC_ROOT` ein.
 
-    python
-    STATIC_URL = '/static/'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-    
+```python
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+```
 
 ## Eine Datenbank erstellen
 
@@ -72,54 +72,54 @@ Es gibt viele verschiedene Datenbanksysteme, in denen wir Daten für unsere Webs
 
 Das sollte schon in der `mysite/settings.py`-Datei eingestellt sein:
 
-    python
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-    
+}
+```
 
 Um eine Datenbank für unser Blog zu erstellen, müssen wir folgenden Befehl in der Konsole ausführen (Dazu müssen wir in dem `djangogirls`-Verzeichnis sein, in dem sich auch die `manage.py`-Datei befindet). Wenn alles glatt läuft, sollte das so aussehen:
 
-    (myvenv) ~/djangogirls$ python manage.py migrate 
-    Operations to perform: 
+    (myvenv) ~/djangogirls$ python manage.py migrate
+    Operations to perform:
       Synchronize unmigrated apps: messages, staticfiles
       Apply all migrations: contenttypes, sessions, admin, auth Synchronizing apps without migrations:
        Creating tables...
           Running deferred SQL...
        Installing custom SQL...
-    Running migrations: 
-      Rendering model states... DONE 
+    Running migrations:
+      Rendering model states... DONE
       Applying contenttypes.0001_initial... OK
       Applying auth.0001_initial... OK
-      Applying admin.0001_initial... OK 
-      Applying contenttypes.0002_remove_content_type_name... OK 
-      Applying auth.0002_alter_permission_name_max_length... OK 
-      Applying auth.0003_alter_user_email_max_length... OK 
+      Applying admin.0001_initial... OK
+      Applying contenttypes.0002_remove_content_type_name... OK
+      Applying auth.0002_alter_permission_name_max_length... OK
+      Applying auth.0003_alter_user_email_max_length... OK
       Applying auth.0004_alter_user_username_opts... OK  
-     Applying auth.0005_alter_user_last_login_null... OK 
+     Applying auth.0005_alter_user_last_login_null... OK
       Applying auth.0006_require_contenttypes_0002... OK
       Applying sessions.0001_initial... OK
-    
+
 
 Und wir sind fertig! Zeit, unseren Webserver zu starten um zu sehen, ob unsere Website funktioniert!
 
 Kontrolliere, dass du in dem Verzeichniss bist, in dem die `manage.py`-Datei liegt (das `djangogirls`-Verzeichnis). Wir starten den Webserver, in dem wir in der Konsole `python manage.py runserver` ausführen:
 
     (myvenv) ~/djangogirls$ python manage.py runserver
-    
+
 
 Wenn du Windows benutzt und dies mit dem `UnicodeDecodeError` fehlschläft, verwende diesen Befehl:
 
     (myvenv) ~/djangogirls$ python manage.py runserver 0:8000
-    
+
 
 Jetzt wollen wir schauen, ob unsere Website funktioniert: Öffne deinen Browser( Firefox, Chrome, Safari, Internet Explorer oder was du sonst nutzt) und gib folgende Adresse ein:
 
     http://127.0.0.1:8000/
-    
+
 
 Der Webserver wird deine Eingabeaufforderung übernehmen, bis du ihn wieder stoppst. Um weiterhin Kommandos einzugeben während er läuft, öffne eine neue Konsole und aktiviere dein virtualenv. Um den Webserver zu stoppen, wechsel zurück in das Fenster iin dem er läuft und drücke STRG+C - Steuerung und C gleichzeitig (in Windows kann es sein, dass du STRG und Pause drücken musst).
 

@@ -10,18 +10,18 @@ Views kommen in die `views.py` Datei. Wir fügen nun also unsere *views* zur Dat
 
 OK, wir öffnen nun diese Datei und schauen was darin steht:
 
-    python
-    from django.shortcuts import render
-    
-    # Create your views here.
-    
+```python
+from django.shortcuts import render
+
+# Create your views here.
+```
 
 Es steht noch nicht viel darin. Der einfachste *view* kann folgendermaßen aussehen:
 
-    python
-    def post_list(request):
-        return render(request, 'blog/post_list.html', {})
-    
+```python
+def post_list(request):
+    return render(request, 'blog/post_list.html', {})
+```
 
 Du siehst hier, dass wir eine Methode (`def`) mit dem Namen `post_list` gemacht haben. Sie hat den Parameter `request`. In der Methode weisen wir mit `return` eine Rückgabe einer anderen Funktion `render` an. Diese wird unser template `blog/post_list.html` zusammenfügen ("render").
 

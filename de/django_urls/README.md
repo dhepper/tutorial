@@ -14,18 +14,18 @@ Jede Seite im Internet braucht seine eigene URL. Dadurch weiß dein Browser was 
 
 Öffne die `mysite/urls.py` Datei in deinem Code Editor nach Wahl und schaue dir an wie sie aussieht:
 
-    python 
-    from django.conf.urls import include, url 
-    from django.contrib import admin 
-    
-    urlpatterns = [ 
-        # Examples:  
-        # url(r'^$', 'mysite.views.home', name='home'),  
-        # url(r'^blog/', include('blog.urls')), 
-    
-        url(r'^admin/', include(admin.site.urls)), 
-    ]
-    
+```python
+from django.conf.urls import include, url
+from django.contrib import admin
+
+urlpatterns = [
+    # Examples:  
+    # url(r'^$', 'mysite.views.home', name='home'),  
+    # url(r'^blog/', include('blog.urls')),
+
+    url(r'^admin/', include(admin.site.urls)),
+]
+```
 
 Wie du siehst hat Django hier schon etwas für uns eingefügt.
 
@@ -33,9 +33,9 @@ Zeilen, die mit `#` anfangen sind Kommentare - das bedeutet, dass diese Zeilen v
 
 Die admin URL, die du im vorangehenden Kapitel bereits besucht hast, ist schon da:
 
-    python   
-      url(r'^admin/', include(admin.site.urls)),
-    
+```python   
+  url(r'^admin/', include(admin.site.urls)),
+```
 
 Für jede URL, die mit mit `admin/` beginnt, wird Django einen entsprechenden View finden mit *view*. Wir fügen hier einige admin URLs ein, dadurch wird nicht alles in eine Datei gepackt --es bleibt lesbarer und sauberer.
 
@@ -45,12 +45,12 @@ Du fragst dich WIE Django den richtigen View zu einer URL findet? Nun, das ist e
 
 Wenn es immer noch dein Wunsch ist, zu verstehen wie wir die Muster erstellt haben, ist hier ein Beispiel des Prozesses - wir brauchen nur eine eingeschränkte Menge der Regeln um das Muster nach dem wir suchen auszudrücken, namentlich:
 
-    ^ für den Anfang eines Textes 
-    $ für das Ende eines Textes 
-    \d für eine Nummer 
-    + um anzuzeigen, dass das vorhergehende Element mind. 1 mal wiederholt werden soll 
+    ^ für den Anfang eines Textes
+    $ für das Ende eines Textes
+    \d für eine Nummer
+    + um anzuzeigen, dass das vorhergehende Element mind. 1 mal wiederholt werden soll
     () um Teile des Musters zu erfassen
-    
+
 
 Alles andere in der Url-Definition wird wörtlich genommen.
 
@@ -73,15 +73,15 @@ Fang damit an die auskommentierten Zeilen (Zeilen mit `#`) zu löschen und füge
 
 Dein `mysite/urls.py` File sollte jetzt so aussehen:
 
-    python 
-    from django.conf.urls import include, url 
-    from django.contrib import admin 
-    
-    urlpatterns = [   
-      url(r'^admin/', include(admin.site.urls)),  
-      url(r'', include('blog.urls')), 
-    ]
-    
+```python
+from django.conf.urls import include, url
+from django.contrib import admin
+
+urlpatterns = [   
+  url(r'^admin/', include(admin.site.urls)),  
+  url(r'', include('blog.urls')),
+]
+```
 
 Django wird nun alle Aufrufe von 'http://127.0.0.1:8000/' auf `blog.urls` umleiten und dort nach weiteren Anweisungen schauen.
 
@@ -91,20 +91,20 @@ Beim Schreiben von regulären Ausdrücken in Python geschieht die immer mit `r` 
 
 Erstelle eine neue, leere Datei `blog/urls.py`. Alles klar! Füge nun diese beiden Zeilen hinzu:
 
-    python 
-    from django.conf.urls import url 
-    from . import views
-    
+```python
+from django.conf.urls import url
+from . import views
+```
 
 Hier importieren wir erstmal nur die Methoden von Django und alles aus den `views` unserer `blog` Applikation (wir haben noch keine, aber dazu kommen wir gleich!)
 
 Danach können wir unser erstes URL Pattern hinzufügen:
 
-    python 
-    urlpatterns = [
-        url(r'^$', views.post_list, name='post_list'),
-    ]
-    
+```python
+urlpatterns = [
+    url(r'^$', views.post_list, name='post_list'),
+]
+```
 
 Hier haben wir nun einen `view` mit dem Namen `post_list` zu `^$` URL hinzugefügt. Dieser reguläre Ausdruck wird dem Anfang `^` gefolgt von dem ende `$` passen - so dass nur eine leere Zeichenfolge zutrifft. Und das ist auch richtig so weil in Django die URL Auflösung nach 'http://127.0.0.1:8000/' kein Teil der URL ist. Dieses Muster zeigt Django auf, dass `views.post_list` der Ort ist, wenn jemand auf deine Website mit der 'http://127.0.0.1:8000/' Adresse geht.
 

@@ -18,10 +18,10 @@ Bootstrap hat seinen Ursprung im Umfeld von Twitter und wird heute von Freiwilli
 
 Um Bootstrap zu installieren, musst du dies in den `<head>` in deine `HTML`-Datei einfügen (`blog/templates/blog/post_list.html`):
 
-    html 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    
+```html
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+```    
 
 Dies fügt deinem Projekt keine Dateien hinzu. Es verweist nur auf Dateien, die im Internet vorhanden sind. Öffne und aktualisiere deine Webseite. Da ist sie!
 
@@ -44,7 +44,7 @@ Dies tun wir, indem wir einen Ordner namens `static` in der Blog-app erstellen:
     │   ├── migrations
     │   └── static
     └── mysite
-    
+
 
 Django findet automatisch alle Ordner mit dem Namen "static" in allen Ordnern unserer Apps und ist in der Lage, ihre Inhalte als statische Dateien zu nutzen.
 
@@ -57,7 +57,7 @@ Nun erstellen wir eine CSS-Datei, um deiner Website deinen eigenen Stil zu verle
          └─── static
               └─── css
                    └─── blog.css
-    
+
 
 Zeit ein wenig CSS zu schreiben! Öffne die `blog/static/css/blog.css` Datei in Deinem Code Editor.
 
@@ -67,61 +67,61 @@ Aber lass' uns zumindest ein wenig machen. Beispielsweise könnten wir die Farbe
 
 In Deiner `blog/static/css/blog.css` Datei änderst Du den folgenden Code:
 
-    css
-    h1 a {
-        color: #FCA205;
-    }
-    
+```css
+h1 a {
+    color: #FCA205;
+}
+```
 
 `h1 a` ist ein CSS-Selektor. Dies bedeutet, dass wir allen `a` Elementen innerhalb eines `h1`-Elements unsere Stile zuordnen (z. B. wenn wir in unserem Code so etwas wie: `< h1 >< a Href = "" > Link </a >< / h1 >`haben). In diesem Fall wird die Farbe durch den Code `#FCA205` in die Farbe Orange geändert. Du kannst hier natürlich Deine eigene Farbe vorgeben!
 
 In einer CSS-Datei werden Styles für Elemente der HTML-Datei festgelegt. Die Elemente werden durch den Elementnamen (in der Regel `a`, `h1`, `body`),das Attribut `class` oder die Attribut `id` bestimmt. Klassen (class) und IDs (id) sind Namen, die Du den Elementen selbst gibst. Klassen definieren dabei Gruppen von Elementen und IDs verweisen auf bestimmte Elemente. Beispielsweise kann das folgende HTML-Tag von CSS mittels des Tag-Names `ein`, die Klasse `External_link` oder die Id `Link_to_wiki_page` identifiziert werden:
 
-    html 
-    <a href="http://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">
-    
+```html
+<a href="http://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">
+```  
 
 Weitere Informationen siehe [CSS-Selektoren in w3schools](http://www.w3schools.com/cssref/css_selectors.asp).
 
 Dann musst Du auch Deiner HTML-Vorlage sagen, dass wir CSS aus einer externen Datei laden wollen. Öffne dazu die Datei `blog/templates/blog/post_list.html` und füge folgende Zeile ganz am Anfang der Datei an:
 
-    html 
-    {% load staticfiles %}
-    
+```html
+{% load staticfiles %}
+```
 
 Wir laden hier nur statische Dateien. Dann fügst Du zwischen `<head>` und `</head>`, nach dem Link auf die Bootstrap-CSS-Dateien die folgenden Zeilen an: (Der Browser liest die Dateien in der Reihenfolge, wie sie angegeben sind, ein, so dass Dein CSS möglicherweise den Code in der Bootstrap-Dateien überschreibt.)
 
-    html 
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    
+```html
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+```
 
 Wir haben unserer Vorlage gerade gesagt, wo sich die CSS-Datei befindet.
 
 Deine Datei sieht jetzt folgendermaßen aus:
 
-    html 
-    {% load staticfiles %} 
-    <html>
-         <head>
-             <title>Django Girls blog</title>
-             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-             <link rel="stylesheet" href="{% static 'css/blog.css' %}">     
-    </head>     
-    <body>
+```html
+{% load staticfiles %}
+<html>
+     <head>
+         <title>Django Girls blog</title>
+         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+         <link rel="stylesheet" href="{% static 'css/blog.css' %}">     
+</head>     
+<body>
+         <div>
+             <h1><a href="/">Django Girls Blog</a></h1>
+         </div>
+
+         {% for post in posts %}
              <div>
-                 <h1><a href="/">Django Girls Blog</a></h1>
-             </div>
-    
-             {% for post in posts %}
-                 <div>
-                     <p>published: {{ post.published_date }}</p>
-                     <h1><a href="">{{ post.title }}</a></h1>
-                     <p>{{ post.text|linebreaks }}</p>             </div>
-             {% endfor %}
-         </body> 
-    </html>
-    
+                 <p>published: {{ post.published_date }}</p>
+                 <h1><a href="">{{ post.title }}</a></h1>
+                 <p>{{ post.text|linebreaks }}</p>             </div>
+         {% endfor %}
+     </body>
+</html>
+```    
 
 Ok, speicher die Datei und lade die Seite neu!
 
@@ -129,11 +129,11 @@ Ok, speicher die Datei und lade die Seite neu!
 
 Gut gemacht! Vielleicht wollen wir unserer Webseite etwas mehr Luft geben, indem wir den Abstand auf der linken Seite vergrößern? Probieren wir es aus!
 
-    css
-    body {     
-        padding-left: 15px; 
-    }
-    
+```css
+body {     
+    padding-left: 15px;
+}
+```
 
 Füge dies zu Deinem CSS hinzu, speicher die Datei und guck Dir die Veränderung an!
 
@@ -141,20 +141,20 @@ Füge dies zu Deinem CSS hinzu, speicher die Datei und guck Dir die Veränderung
 
 Vielleicht können wir auch die Schrift in unserem HTML-Kopf anpassen? Füge dies zu `<head>` in `blog/templates/blog/post_list.html`hinzu:
 
-    html 
-    <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    
+```html
+<link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+```
 
 Diese Zeile importiert die Schriftart *Lobster* von Google Fonts (https://www.google.com/fonts).
 
 Nun füge die Zeile `font-family: 'Lobster';` in die CSS-Datei `blog/static/css/blog.css` ein. Sie gehört in den `h1 a` Deklaration-Block (der Code zwischen den Klammern `{` und `}`) und lade die Seite neu:
 
-    css
-    h1 a {
-       color: #FCA204;
-       font-family: 'Lobster';
-    }
-    
+```css
+h1 a {
+   color: #FCA204;
+   font-family: 'Lobster';
+}
+```
 
 ![Abbildung 14.3](images/font.png)
 
@@ -164,105 +164,105 @@ CSS hat - wie schon gesagt - ein Klassen-Konzept. Das erlaubt Dir Teile des HTML
 
 Im nächsten Schritt werden wir den HTML-Code einteilen. Füge eine Klasse (class) names `page-header` dem `div` hinzu, der die Kopfzeilen (header) enthalten soll:
 
-    html 
-    <div class="page-header">     
-    <h1><a href="/">Django Girls Blog</a></h1> 
-    </div>
-    
+```html
+<div class="page-header">     
+<h1><a href="/">Django Girls Blog</a></h1>
+</div>
+```
 
 Jetzt fügen wir noch eine Klasse `post` für den Blog-Inhalt (Post) dem `div` hinzu.
 
-    html 
-    <div class="post">     
-        <p>published: {{ post.published_date }}</p>     
-        <h1><a href="">{{ post.title }}</a></h1>     
-        <p>{{ post.text|linebreaks }}</p> 
-    </div>
-    
+```html
+<div class="post">     
+    <p>published: {{ post.published_date }}</p>     
+    <h1><a href="">{{ post.title }}</a></h1>     
+    <p>{{ post.text|linebreaks }}</p>
+</div>
+```
 
 Entsprechend der Änderungen im HTML erweitern wir unser CSS mit entsprechenden Selektoren. Selektoren, die mit `.` anfangen, beziehen sich auf Klassen im HTML. Wenn Du Dich weiter mit dem folgenden CSS-Code auseinandersetzen willst, helfen Dir die zahlreichen Anleitungen im Internet weiter. Für den Anfang reicht es aus, folgenden Text in deine `blog/static/css/blog.css`-Datei zu kopieren:
 
-    css
-    .page-header {
-        background-color: #ff9400;
-        margin-top: 0;
-        padding: 20px 20px 20px 40px;
-    }
-    
-    .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-        color: #ffffff;
-        font-size: 36pt;
-        text-decoration: none;
-    }
-    
-    .content {
-        margin-left: 40px;
-    }
-    
-    h1, h2, h3, h4 {
-        font-family: 'Lobster', cursive;
-    }
-    
-    .date {
-        float: right;
-        color: #828282;
-    }
-    
-    .save {
-        float: right;
-    }
-    
-    .post-form textarea, .post-form input {
-        width: 100%;
-    }
-    
-    .top-menu, .top-menu:hover, .top-menu:visited {
-        color: #ffffff;
-        float: right;
-        font-size: 26pt;
-        margin-right: 20px;
-    }
-    
-    .post {
-        margin-bottom: 70px;
-    }
-    
-    .post h1 a, .post h1 a:visited {
-        color: #000000;
-    }
-    
+```css
+.page-header {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date {
+    float: right;
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
+```
 
 Der HTML-Code, der für die Anzeige der Blogposts verantwortlich ist, soll durch Klassen erweitert werden. Ersetze den folgenden Code:
 
-    html
-    {% for post in posts %}
-        <div class="post">
-            <p>published: {{ post.published_date }}</p>
-            <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaks }}</p>
-        </div>
-    {% endfor %}
-    
+```html
+{% for post in posts %}
+    <div class="post">
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
+```
 
 in `blog/templates/blog/post_list.html` durch diesen:
 
-    html
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
-                {% for post in posts %}
-                    <div class="post">
-                        <div class="date">
-                            {{ post.published_date }}
-                        </div>
-                        <h1><a href="">{{ post.title }}</a></h1>
-                        <p>{{ post.text|linebreaks }}</p>
+```html
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        {{ post.published_date }}
                     </div>
-                {% endfor %}
-            </div>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaks }}</p>
+                </div>
+            {% endfor %}
         </div>
     </div>
-    
+</div>
+```
 
 Speichere die geänderten Dateien und aktualisiere die Webseite.
 

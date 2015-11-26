@@ -4,7 +4,7 @@ Django ist in Python geschrieben. Wir brauchen Python für alles in Django. Fang
 
 ### Windows
 
-Python für Windows kannst du auf der Webseite https://www.python.org/downloads/release/python-343/ herunterladen. Nachdem du die ***.msi**-Datei heruntergeladen hast, solltest du diese ausführen (doppelklicke die Datei) und den Anweisungen folgen. Es ist wichtig, dass du dir den Pfad (das Verzeichnis) merkst wo du Python installierst. Du wirst das später brauchen!
+Python für Windows kannst du auf der Webseite https://www.python.org/downloads/release/python-343/ herunterladen. Nachdem du die ***.msi***-Datei heruntergeladen hast, solltest du diese ausführen (doppelklicke die Datei) und den Anweisungen folgen. Es ist wichtig, dass du dir den Pfad (das Verzeichnis) merkst wo du Python installierst. Du wirst das später brauchen!
 
 Worauf du besonders achten solltest: im zweiten Schritt des Installationsassistenten ("Anpassen") solltest du nach unten scrollen und die Option "Add python.exe to the Path" auswählen, wie hier:
 
@@ -16,7 +16,7 @@ Es ist ziemlich wahrscheinlich, dass du Python schon automatisch installiert has
 
     $ python3 --version
     Python 3.4.3
-    
+
 
 Wenn Python bei dir nicht installiert ist, oder du eine andere Version willst, kannst du es folgendermaßen installieren:
 
@@ -25,21 +25,21 @@ Wenn Python bei dir nicht installiert ist, oder du eine andere Version willst, k
 Gib diesen Befehl in die Konsole ein:
 
     $ sudo apt-get install python3.4
-    
+
 
 #### Fedora (bis zu 21)
 
 Gib diesen Befehl in die Konsole ein:
 
     $ sudo yum install python3.4
-    
+
 
 #### Fedora (22+)
 
 Gib diesen Befehl in die Konsole ein:
 
     $ sudo dnf install python3.4
-    
+
 
 ### OS X
 
@@ -52,7 +52,7 @@ Um zu überprüfen, ob die Installation erfolgreich war, öffne eine Konsole und
 
     $ python3 --version
     Python 3.4.3
-    
+
 
 * * *
 
