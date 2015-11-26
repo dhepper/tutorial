@@ -4,4 +4,4 @@ Gleich geht's los! Du wirst deine erste Zeile Programmcode schreiben. Daher ist 
 
 > **Anmerkung** Es kann sein, dass du diese Informationen bereits aus dem Kapitel über Installation kennst. Wenn dem so ist, kannst du direkt zum nächsten Kapitel übergehen!
 
-{% include "code_editor/instructions.md" %}
+{% include "/code_editor/instructions.md" %}

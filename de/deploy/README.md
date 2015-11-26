@@ -18,7 +18,7 @@ Git ist ein "Versionsverwaltungssystem", das von vielen Programmierern benutzt w
 
 > **Hinweis** Falls du die Installationsschritte bereits durchgeführt hast, dann kannst du mit dem nächsten Abschnitt fortfahren und anfangen deine Git-Repository zu erstellen.
 
-{% include "code_editor/instructions.md" %}
+{% include "/code_editor/instructions.md" %}
 
 ## Unser Git-Repository
 
@@ -26,11 +26,11 @@ Git verwaltet die Veränderungen an einer Sammlung von Dateien in einem sogenann
 
 > **Hinweis** Überprüfe dein aktuelles Arbeitsverzeichnis mit dem Befehl `pwd` (OSX/Linux) oder `cd` (Windows) vor dem Initialisieren der Repository. Du musst im `djangogirls`-Verzeichnis sein.
 
-    $ git init 
-    Initialized empty Git repository in ~/djangogirls/.git/ 
-    $ git config --global user.name "Your Name" 
+    $ git init
+    Initialized empty Git repository in ~/djangogirls/.git/
+    $ git config --global user.name "Your Name"
     $ git config --global user.email you@example.com
-    
+
 
 Die Initialisierung einer Git-Repository müssen wir nur einmal pro Projekt machen. (und du musst nicht erneut deinen Benutzernamen und E-Mail-Adresse eingeben).
 
@@ -41,7 +41,7 @@ Git wird die Änderungen an all den Dateien und Ordnern in diesem Verzeichnis au
     myvenv
     db.sqlite3
     .DS_Store
-    
+
 
 Speichere die Datei mit dem Namen `.gitignore` im "djangogirls"-Verzeichnis.
 
@@ -49,21 +49,21 @@ Speichere die Datei mit dem Namen `.gitignore` im "djangogirls"-Verzeichnis.
 
 Es ist hilfreich den Befehl `git status` vor `git add` auszuführen oder immer dann, wenn du dir unsicher bist, was geändert wurde. Das wird beim Aufhalten von irgendwelche überraschende Ereignisse, wie dass falsche Hinzufügen oder Übertragen von Dateien, helfen. Das `git status` Kommando gibt Informationen über unbeobachtete/modifizierte/hinzugefügte Dateien, den Verzweigungsstatus und einiges mehr wieder. Die Ausgabe sollte diesem ähnlich sein:
 
-    $ git status 
-    On branch master 
-    
-    Initial commit 
-    
+    $ git status
+    On branch master
+
+    Initial commit
+
     Untracked files:
-       (use "git add <file>..." to include in what will be committed) 
-    
+       (use "git add <file>..." to include in what will be committed)
+
             .gitignore
              blog/
              manage.py
-             mysite/ 
-    
+             mysite/
+
     nothing added to commit but untracked files present (use "git add" to track)
-    
+
 
 Und nun speichern wir unsere Änderungen mit diesen Kommandos:
 
@@ -74,7 +74,7 @@ Und nun speichern wir unsere Änderungen mit diesen Kommandos:
      create mode 100644 .gitignore
      [...]
      create mode 100644 mysite/wsgi.py
-    
+
 
 ## Den Code nach GitHub schieben
 
@@ -96,7 +96,7 @@ Gib Folgendes in deine Konsole ein (Ersetze dabei `<your-github-username>` durch
 
     $ git remote add origin https://github.com/<your-github-username>/my-first-blog.git
     $ git push -u origin master
-    
+
 
 Gibt deinen GitHub Benutzernamen und dein Passwort ein und du solltest etwas ähnliches wie das hier sehen:
 
@@ -108,7 +108,7 @@ Gibt deinen GitHub Benutzernamen und dein Passwort ein und du solltest etwas äh
     To https://github.com/hjwp/my-first-blog.git
      * [new branch]      master -> master
     Branch master set up to track remote branch master from origin.
-    
+
 
 <!--TODO: maybe do ssh keys installs in install party, and point ppl who dont have it to an extention -->
 
@@ -118,7 +118,7 @@ Dein Code ist jetzt auf GitHub. Guck es dir dort mal an! Dort bist du in guter G
 
 > **Hinweis** Es ist möglich, dass du bereits ein PythonAnywhere Konto angelegt hast. Wenn ja, dann brauchst du das nicht nochmal machen.
 
-{% include "deploy/signup_pythonanywhere.md" %}
+{% include "/deploy/signup_pythonanywhere.md" %}
 
 ## Den Code nach PythonAnywhere übertragen
 
@@ -129,7 +129,7 @@ Sobald du dich für PythonAnywhere angemeldet hast, wirst du zu deinem Dashboard
 Lass uns den Code von GitHub auf Pythonanywhere übertragen indem wir einen "Klon" unseres Repositoriums erzeugen. Tippe das Folgende in die Konsole auf PythonAnywhere (vergesse nicht deinen GitHub Benutzernamen an Stelle von `<your-github-username>` zu benutzen):
 
     $ git clone https://github.com/<your-github-username>/my-first-blog.git
-    
+
 
 Dies wird eine Kopie deines Codes auf PythonAnywhere übertragen. Überprüfe es indem du eingibst `tree my-first-blog`:
 
@@ -150,26 +150,26 @@ Dies wird eine Kopie deines Codes auf PythonAnywhere übertragen. Überprüfe es
         ├── settings.py
         ├── urls.py
         └── wsgi.py
-    
+
 
 ### Erstelle eine virtualenv auf PythonAnywhere
 
 Genauso wie du auf deinen eigenen Computer eine virtualenv erstellt hast, kannst du auch eine auf PythonAnywhere erstellen. Schreibe Folgendes in die Bash:
 
     $ cd my-first-blog
-    
+
     $ virtualenv --python=python3.4 myvenv
     Running virtualenv with interpreter /usr/bin/python3.4
     [...]
     Installing setuptools, pip...done.
-    
-    $ source myvenv/bin/activate 
-    
-    (mvenv) $ pip install django whitenoise 
-    Collecting django 
-    [...] 
+
+    $ source myvenv/bin/activate
+
+    (mvenv) $ pip install django whitenoise
+    Collecting django
+    [...]
     Successfully installed django-1.8.2 whitenoise-2.0
-    
+
 
 > **Hinweis** Der Schritt `pip install` kann ein paar Minuten dauern. Hab etwas Geduld! Aber, wenn es länger als 5 Minuten dauern sollte, dann ist etwas falsch gelaufen. Frage am besten deinen Coach.
 
@@ -184,17 +184,17 @@ Wir werden später im Tutorial ein wenig mehr über statische Dateien erfahren w
 Für`s Erste müssen wir nur ein extra Kommando auf dem Server ausführen, genannt `collectstatic`. Es befiehlt Django alle statischen Dateien die es auf dem Server braucht, einzusammeln. Im Moment sind dies hauptsächlich Dateien, welche die Admin Site hübsch aussehen lassen.
 
     (mvenv) $ python manage.py collectstatic
-    
+
     You have requested to collect static files at the destination
     location as specified in your settings:
-    
+
         /home/edith/my-first-blog/static
-    
+
     This will overwrite existing files!
     Are you sure you want to do this?
-    
+
     Type 'yes' to continue, or 'no' to cancel: yes
-    
+
 
 Tippe "yes" ein und es verschwindet! Liebst du es nicht auch Computer dazu zu bringen Seiten über Seiten von undurchdringbaren Text auszugeben? Ich mache immer kleine Geräusche um das zu begleiten. Brp, brp brp...
 
@@ -204,7 +204,7 @@ Tippe "yes" ein und es verschwindet! Liebst du es nicht auch Computer dazu zu br
     Copying '/home/edith/my-first-blog/mvenv/lib/python3.4/site-packages/django/contrib/admin/static/admin/css/changelists.css'
     Copying '/home/edith/my-first-blog/mvenv/lib/python3.4/site-packages/django/contrib/admin/static/admin/css/base.css'
     62 static files copied to '/home/edith/my-first-blog/static'.
-    
+
 
 ### Erstellen einer Datenbank auf PythonAnywhere
 
@@ -212,14 +212,14 @@ Hier ist ein weiterer Unterschied zwischen deinen Computer und einem Server: unt
 
 Wir initialisieren die Datenbank auf dem Server genauso wie wir es auf deinen Computer mit `migrate` und `createsuperuser` gemacht haben:
 
-    (mvenv) $ python manage.py migrate 
-    Operations to perform: 
+    (mvenv) $ python manage.py migrate
+    Operations to perform:
     [...]
-       Applying sessions.0001_initial... OK 
-    
-    
+       Applying sessions.0001_initial... OK
+
+
     (mvenv) $ python manage.py createsuperuser
-    
+
 
 ## Veröffentlichen unseres Blogs als eine Web App
 
@@ -252,17 +252,17 @@ Lösche alle Inhalte und ersetze sie durch etwas wie dies:
     python
     import os
     import sys
-    
+
     path = '/home/<your-username>/my-first-blog'  # use your own username here
     if path not in sys.path:
         sys.path.append(path)
-    
+
     os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
-    
+
     from django.core.wsgi import get_wsgi_application
     from whitenoise.django import DjangoWhiteNoise
     application = DjangoWhiteNoise(get_wsgi_application())
-    
+
 
 > **Hinweis** Vergiss nicht deinen Benutzernamen an die Stelle `<your-username>` einzusetzen
 

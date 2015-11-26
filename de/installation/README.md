@@ -14,19 +14,19 @@ Im Workshop wirst du ein Blog programmieren und es gibt einige Dinge, bei denen 
 
 # Python installieren
 
-{% include "python_installation/instructions.md" %}
+{% include "/python_installation/instructions.md" %}
 
 # Virtualenv einrichten und Django installieren
 
-{% include "django_installation/instructions.md" %}
+{% include "/django_installation/instructions.md" %}
 
 # Einen Texteditor installieren
 
-{% include "code_editor/instructions.md" %}
+{% include "/code_editor/instructions.md" %}
 
 # Git installieren
 
-{% include "code_editor/instructions.md" %}
+{% include "/code_editor/instructions.md" %}
 
 # Einen GitHub-Account einrichten
 
@@ -34,7 +34,7 @@ Im Workshop wirst du ein Blog programmieren und es gibt einige Dinge, bei denen 
 
 # Einen PythonAnywhere-Account erstellen
 
-{% include "deploy/signup_pythonanywhere.md" %}
+{% include "/deploy/signup_pythonanywhere.md" %}
 
 # Fang an zu lesen!
 
