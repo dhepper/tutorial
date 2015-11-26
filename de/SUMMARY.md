@@ -9,7 +9,7 @@
 *   [Einführung in Python](python_introduction/README.md)
 *   [Django - Was ist das?]( django/README.md)
 *   [Django Installation](django_installation/README.md)
-*   [Dein erstes Django Projekt!](jango_start_project/README.md)
+*   [Dein erstes Django Projekt!](django_start_project/README.md)
 *   [Django-Modelle](django_models/README.md)
 *   [Django Administration](django_admin/README.md)
 *   [Veröffentlichen!](deploy/README.md)
