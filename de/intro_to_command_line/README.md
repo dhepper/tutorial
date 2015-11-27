@@ -10,7 +10,7 @@ Im Folgenden zeigen wir dir, wie du das schwarze Fenster benutzt, das alle Hacke
 
 ## Was ist die die Konsole?
 
-Das Fenster, welches gewöhnlich die **Kommandokonsole** oder **Kommandoleisten-Interface** genannt wird, ist eine Text basierte Applikation zum Betrachten, Bearbeiten und Manipulieren von Dateien auf deinem Computer. Ähnlich wie Windows Explorer oder Finder auf dem Mac aber ohne das grafische Interface. Andere Bezeichnungen dafür sind: *cmd*, *CLI*, *prompt*, *Eingabeaufforderung*, *Kommandozeile*, <0>Konsole</0>, <0>Terminal</0>..
+Das Fenster, welches gewöhnlich die **Kommandokonsole** oder **Kommandoleisten-Interface** genannt wird, ist eine Text basierte Applikation zum Betrachten, Bearbeiten und Manipulieren von Dateien auf deinem Computer. Ähnlich wie Windows Explorer oder Finder auf dem Mac aber ohne das grafische Interface. Andere Bezeichnungen dafür sind: *cmd*, *CLI*, *prompt*, *Eingabeaufforderung*, *Kommandozeile*, *Konsole*, *Terminal*..
 
 ## Öffnen der Konsolenanwendung
 
@@ -35,12 +35,12 @@ Du solltest nun ein weißes oder schwarzes Fenster sehen, das auf deine Anweisun
 Auf einem Mac oder Linux, siehst du wahrscheinlich `$`, also so:
 
     $
-    
+
 
 Auf Windows siehst du ein `>` Zeichen, also das hier:
 
     >
-    
+
 
 Vor jedem Kommando wird dieses Zeichen und ein Leerzeichen vorangestellt, aber du musst das nicht hinschreiben. Dein Computer macht das für dich :)
 
@@ -51,18 +51,18 @@ Vor jedem Kommando wird dieses Zeichen und ein Leerzeichen vorangestellt, aber d
 Fangen wir mit etwas einfachem an. Schreibe folgenden Befehl:
 
     $ whoami
-    
+
 
 oder
 
     > whoami
-    
+
 
 Und dann betätige `Enter`. Dies ist unser Ergebnis:
 
     $ whoami
     olasitarska
-    
+
 
 Wie du sehen kannst, hat der Computer gerade deinen Benutzernamen ausgegeben. Toll, was?:)
 
@@ -78,13 +78,13 @@ Es wäre schön zu sehen, wo wir uns befinden, oder? Lass uns nachsehen. Gibt di
 
     $ pwd
     /Users/olasitarska
-    
+
 
 Wenn du Windows benützt, schreibe folgendes:
 
     > cd
     C:\Users\olasitarska
-    
+
 
 Du wirst wahrscheinlich etwas Ähnliches auf deinem Gerät sehen. Wenn du die Konsole öffnest, befindest du dich normalerweise im Heimverzeichnis deines Benutzers.
 
@@ -102,12 +102,12 @@ Nun, was befindet sich in deinem Verzeichnis? Es wäre toll das herauszufinden. 
     Downloads
     Musik
     ...
-    
+
 
 Windows:
 
     > dir  Directory of C:\Users\olasitarska 05/08/2014 07:28 PM <DIR> Applications 05/08/2014 07:28 PM <DIR> Desktop 05/08/2014 07:28 PM <DIR> Downloads 05/08/2014 07:28 PM <DIR> Music ...
-    
+
 
 * * *
 
@@ -116,24 +116,24 @@ Windows:
 Lass uns jetzt zu unserem Desktop-Verzeichnis wechseln:
 
     $ cd Desktop
-    
+
 
 Windows:
 
     > cd Desktop
-    
+
 
 Schau, ob das Wechseln des Verzeichnisses funktioniert hat:
 
     $ pwd
     /Users/olasitarska/Desktop
-    
+
 
 Windows:
 
     > cd
     C:\Users\olasitarska\Desktop
-    
+
 
 Hier ist es!
 
@@ -146,12 +146,12 @@ Hier ist es!
 Wie wärs damit ein Probeverzeichnis auf deinem Desktop zu erstellen? So kannst du das tun:
 
     $ mkdir practice
-    
+
 
 Windows:
 
     > mkdir practice
-    
+
 
 Dieser kleine Befehl erstellt einen Ordner mit dem Namen `practice` auf deinem Desktop. Du kannst nun überprüfen ob er wirklich dort ist indem du auf deinem Desktop nachschaust oder indem du den Befehl `ls` or `dir` ausführst! Versuch es :)
 
@@ -165,16 +165,18 @@ Eine kleine Herausforderung für dich: erstelle in deinem neu erstellten `practi
 
 #### Lösung:
 
-    $ cd practice $ mkdir test $ ls test
-    
+    $ cd practice
+    $ mkdir test
+    $ ls test
+
 
 Windows:
 
-    > cd practice 
-    > mkdir test 
-    > dir 
+    > cd practice
+    > mkdir test
+    > dir
     05/08/2014 07:28 PM <DIR>   test
-    
+
 
 Glückwunsch! :)
 
@@ -187,12 +189,12 @@ Wir wollen kein Chaos hinterlassen, also lass uns das bislang Geschaffene wieder
 Zuerst müssen wir zurück zum Desktop wechseln:
 
     $ cd ..
-    
+
 
 Windows:
 
     > cd ..
-    
+
 
 Durch Verwendung von `..` mit dem `cd` Kommando wechselst du dein aktuelles Verzeichnis zum übergeordneten Verzeichnis (dies ist das Verzeichnis, dass das aktuelle Verzeichnis enthält).
 
@@ -200,48 +202,48 @@ Schau wo du gerade bist:
 
     $ pwd
     /Users/olasitarska/Desktop
-    
+
 
 Windows:
 
     > cd
     C:\Users\olasitarska\Desktop
-    
+
 
 Jetzt ist es an der Zeit dein `practice` Verzeichnis zu löschen:
 
 > **Achtung**: Wenn du Daten mit `del`, `rmdir` oder `rm` löschst, kannst du das nicht mehr rückgängig machen, das bedeutet *die gelöschten Dateien sind für immer weg*! Sei also sehr vorsichtig mit diesem Befehl.
 
     $ rm -r practice
-    
+
 
 Windows:
 
-    > rmdir /S practice 
+    > rmdir /S practice
     practice, Are you sure <Y/N>? Y
-    
+
 
 Geschafft! Lass uns schauen ob es wirklich gelöscht ist:
 
     $ ls
-    
+
 
 Windows:
 
     > dir
-    
+
 
 ### Beenden
 
 Das wärs fürs erste. Du kannst nun beruhigt deine Konsole schließen. Lass es uns wie die Hacker machen, okay?:)
 
     $ exit
-    
+
 
 Windows:
 
     > exit
-    
+
 
 Cool, was? :)
 
