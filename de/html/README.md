@@ -85,24 +85,25 @@ Der Titel "Ola's blog" wird nun im Browser angezeigt. Hast du es bemerkt? Der Br
 
 Wie Du vielleicht bemerkt hast, hat jedes Element zu Beginn einen öffnenden Tag und einen zugehörigen *schließenden Tag* mit `/` und die Elemente sind darin *eingebettet*. Ein Tag in einem zweiten kann nicht außerhalb von diesem geschlossen werden, die Reihenfolge muss immer stimmen.
 
-Es ist wie Sachen in Kisten stecken. In die größte Box: `<html></html>` kommt eine kleinere Box: `<body></body>`, und dort wiederum packen wir viele kleine Kisten hinein: </code>`<p></p></0>.</p>
+Es ist wie Sachen in Kisten stecken. In die größte Box: `<html></html>` kommt eine kleinere Box: `<body></body>`, und dort wiederum packen wir viele kleine Kisten hinein: `<p></p>`.
 
-<p>Die Regeln und Reihenfolgen von <em>schließenden</em> Tags und <em>Verschachtelung</em> der Elemente musst Du immer einhalten. Anderenfalls können Browser die Seite nicht richtig interpretieren und darstellen.</p>
+Die Regeln und Reihenfolgen von _schließenden_ Tags und _Verschachtelung_ der Elemente musst Du immer einhalten. Anderenfalls können Browser die Seite nicht richtig interpretieren und darstellen.
 
-<h2>Dein Template anpassen</h2>
+## Dein Template anpassen
 
-<p>Jetzt kannst du ein bisschen rumprobieren und dein Template umgestalten! Hier sind ein paar nützliche Tags dafür:</p>
+Jetzt kannst du ein bisschen rumprobieren und dein Template umgestalten! Hier sind ein paar nützliche Tags dafür:
 
-<ul>
-<li><code><h1>Überschrift</h1>` - (headline) für wichtigste Überschriften</li>
-*   `<h2>Unter-Überschrift</h2>` die nächsttiefere Überschiftenebene
-*   `<h3>Unter-unter Überschrift</h3>` ... und so weiter bis `<h6>`
-*   `<em>Text</em>` hebt deinen Text hervor
-*   `<strong>Text</strong>` macht deinen Text fett
-*   `<br />` fängt eine neue Zeile an (du kannst alles zwischen br schreiben)
-*   `<a href="http://djangogirls.org">link</a>` erstellt einen Link
-*   `<ul><li>Erster Punkt</li><li>second item</li></ul>` generiert eine Liste so wie diese hier!
-*   `<div></div>` definiert einen Abschnitt auf einer Seite</ul>
+
+- `<h1>Überschrift</h1>` - (headline) für wichtigste Überschriften
+-  `<h2>Unter-Überschrift</h2>` die nächsttiefere Überschiftenebene
+-  `<h3>Unter-unter Überschrift</h3>` ... und so weiter bis `<h6>`
+-  `<em>Text</em>` hebt deinen Text hervor
+-  `<strong>Text</strong>` macht deinen Text fett
+-  `<br />` fängt eine neue Zeile an (du kannst alles zwischen br schreiben)
+-  `<a href="http://djangogirls.org">link</a>` erstellt einen Link
+-  `<ul><li>Erster Punkt</li><li>second item</li></ul>` generiert eine Liste so wie diese hier!
+-  `<div></div>` definiert einen Abschnitt auf einer Seite
+
 Hier ein Beispiel eines vollständigen Templates:
 
 ```html
@@ -143,7 +144,7 @@ Yaaay! Bis jetzt zeigt unser Template aber immer genau die **gleichen Inhalte** 
 
 Eigentlich wollen wir richtige Posts anzeigen, die in unserer Django Admin Oberfläche hinzugefügt wurden -und das wollen wir als nächstes tun.
 
-## Noch eine Sache: anwenden!
+## Noch eine Sache: veröffentlichen!
 
 Es wäre gut das alles live draußen im Internet zu sehen, oder? Lass uns noch eine PythonAnywhere-Anwendung machen:
 
