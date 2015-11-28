@@ -105,26 +105,26 @@ Alle Objekte bzw. Modelle unserer Applikation werden in der `blog/models.py`-Dat
 
 Lass uns `blog/models.py` öffnen, lösche alles darin und schreibe Code wie diesen:
 
-```python 
+```python
 from django.db import models
 from django.utils import timezone
 
 
 class Post(models.Model):  
-   author = models.ForeignKey('auth.User')
-   title = models.CharField(max_length=200)
-   text = models.TextField()  
-   created_date = models.DateTimeField(    
+    author = models.ForeignKey('auth.User')
+    title = models.CharField(max_length=200)
+    text = models.TextField()  
+    created_date = models.DateTimeField(    
            default=timezone.now)  
-   published_date = models.DateTimeField(    
+    published_date = models.DateTimeField(    
           blank=True, null=True)
 
     def publish(self):     
-      self.published_date = timezone.now()   
-      self.save()   
+        self.published_date = timezone.now()   
+        self.save()   
 
-   def __str__(self):    
-     return self.title
+    def __str__(self):    
+        return self.title
 ```
 
 > Kontrolliere nochmal, dass du zwei Unterstriche (`_`) vor und hinter dem `str` gesetzt hast. Diese Konvention wird häufig in Python benutzt und manchmal nennen wir es "dunder" (kur für Doppel Unterstrich).
