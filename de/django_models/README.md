@@ -131,9 +131,9 @@ class Post(models.Model):
 
 Es sieht kompliziert aus, oder? Aber keine Sorge, wir werden erklären, was diese Zeilen bedeuten!
 
-Die Zeilen die mit `from` oder `import` beginnen sind Zeilen, die PYthon sagen Sachen aus anderen Dateien mitzunutzen. Anstadt häufig genutzte Sachen in jede Date einzeln zu kopieren, können wir sie mit `... from ... import ... </0> einbinden. import ...`.
+Die Zeilen die mit `from` oder `import` beginnen sind Zeilen, die PYthon sagen Sachen aus anderen Dateien mitzunutzen. Anstatt häufig genutzte Sachen in jede Date einzeln zu kopieren, können wir sie mit `... from ... import ...` einbinden..
 
-0>class Post(models.Model):</code> - Diese Zeile definiert unser Modell).
+`class Post(models.Model):` - Diese Zeile definiert unser Modell).
 
 *   `class` ist ein spezielles Schlüsselwort, womit wir angeben dass wir hier ein Objekt definieren wollen.
 *   `Post` ist der Name unseres Modells. Wir können ihm auch einen anderen Namen geben (aber wir müssen spezielle und Leerzeichen vermeiden). Beginne einen Klassenname immer mit einem Großbuchstaben.
