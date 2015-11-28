@@ -18,7 +18,7 @@ Git ist ein "Versionsverwaltungssystem", das von vielen Programmierern benutzt w
 
 > **Hinweis** Falls du die Installationsschritte bereits durchgeführt hast, dann kannst du mit dem nächsten Abschnitt fortfahren und anfangen deine Git-Repository zu erstellen.
 
-{% include "/code_editor/instructions.md" %}
+{% include "/deploy/install_git.md" %}
 
 ## Unser Git-Repository
 
@@ -36,16 +36,22 @@ Die Initialisierung einer Git-Repository müssen wir nur einmal pro Projekt mach
 
 Git wird die Änderungen an all den Dateien und Ordnern in diesem Verzeichnis aufzeichnen, aber wir wollen, dass einige Dateien ignoriert werden. Wir erreichen das, indem wir eine Datei `.gitignore` im Basisverzeichnis des Repos anlegen.. Öffne Deinen Editor und erzeuge eine neue Datei mit dem folgenden Inhalt:
 
-    *.pyc
-    __pycache__
-    myvenv
-    db.sqlite3
-    .DS_Store
-
+```
+*.pyc
+__pycache__
+myvenv
+db.sqlite3
+.DS_Store
+```
 
 Speichere die Datei mit dem Namen `.gitignore` im "djangogirls"-Verzeichnis.
 
 > **Hinweis** Der Punkt am Anfang des Dateinames ist wichtig! Wenn du Schwierigkeiten beim Erstellen haben solltest (Macs lassen z.B. im Finder keine Dateien mit Punkt am Anfang erzeugen), dann verwende die "Speichern unter"-Funktion im Editor, das sollte immer funktionieren. [Punkt-Dateien sind auf Linux und OS X "versteckte Dateien".]
+
+> **Hinweis** Eine der Dateien die du in deiner `.gitignore` angegebenen hast ist `db.sqlite3`. Diese Datei ist deine lokale Datenbank, in der alles
+deine Blog-Posts gespeichert sind. Wir wollen diese Datei nicht zu Deinem
+Repository hinzufügen, weil deine Website auf PythonAnywhere eine andere Datenbank verwenden wird. Diese Datenbank könnte SQLite sein, wie auf Deinem
+Entwicklungsrechner, aber überlicherweise wirst du eine Datenbank namens MySQL verwenden, die mit viel mehr Besuchern wie SQLite umgehen kann. So oder so, wenn du deine SQLite-Datenbank für die GitHub-Kopie ignorierst, bedeutet das dass alle Posts die du bisher angelegt hast erhalten bleiben und lokal verfügbar sind, aber du wirst sie in Produktion erneut hinzufügen müssen. Du solltest dir deine lokale Datenbank als gute Spielplatz vorstellen wo du verschiedene Dinge testen kannst und nicht befürchten musst dass du deine echten Posts von deinem Blog löschst.
 
 Es ist hilfreich den Befehl `git status` vor `git add` auszuführen oder immer dann, wenn du dir unsicher bist, was geändert wurde. Das wird beim Aufhalten von irgendwelche überraschende Ereignisse, wie dass falsche Hinzufügen oder Übertragen von Dateien, helfen. Das `git status` Kommando gibt Informationen über unbeobachtete/modifizierte/hinzugefügte Dateien, den Verzweigungsstatus und einiges mehr wieder. Die Ausgabe sollte diesem ähnlich sein:
 
