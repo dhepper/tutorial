@@ -67,21 +67,23 @@ Es wäre gut zu sehen ob deine Website noch immer im öffentlichen Internet funk
 
 *   Zuerst schiebe deinen Code auf GitHub
 
-    $ git status
-    [...]
-    $ git add -A .
-    $ git status
-    [...]
-    $ git commit -m "Modified templates to display posts from database."
-    [...] $ git push
-
+```
+$ git status
+[...]
+$ git add -A .
+$ git status
+[...]
+$ git commit -m "Modified templates to display posts from database."
+[...] $ git push
+```
 
 *   Dann logge dich wieder ein bei [PythonAnywhere](https://www.pythonanywhere.com/consoles/) und gehe zu deiner **Bash console** (oder starte eine neue) und gebe ein:
 
-    $ cd my-first-blog
-    $ git pull
-    [...]
-
+```
+$ cd my-first-blog
+$ git pull
+[...]
+```
 
 *   Zum Schluss hüpf noch einmal kurz rüber zum [Web tab](https://www.pythonanywhere.com/web_app_setup/) und drück auf **Reload** auf deiner Web App. Deine Änderungen sollten jetzt live sein!
 
