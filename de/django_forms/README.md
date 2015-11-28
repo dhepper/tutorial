@@ -346,7 +346,7 @@ Wir fügen ein weiteres `{% if %}` Tag dazu ein, was dafür sorgt, dass der Link
 {% endif %}
 ```
 
-Dieses `{% if %}` sorgt dafür, dass der Link nur zu dem Browser geschickt wird, wenn der anfragende Nutzer auch angemeldet ist. Dies verhindert die Erzeugung neuer Post`s nicht komplett, ist aber ein sehr guter erster Schritt. In der Erweiterungslektion kümmern wir uns ausgiebiger um Sicherheit.
+Dieses `{% if %}` sorgt dafür, dass der Link nur zu dem Browser geschickt wird, wenn der anfragende Nutzer auch angemeldet ist. Dies verhindert die Erzeugung neuer Post's nicht komplett, ist aber ein sehr guter erster Schritt. In der Erweiterungslektion kümmern wir uns ausgiebiger um Sicherheit.
 
 Da du wahrscheinlich angemeldet bist, wirst du nichts Neues sehen wenn du die Seite aktualisierst. Lade die Seite in einem neuen Browser oder im Inkognito Modus und du wirst sehen, dass der Link nicht auftaucht!
 
@@ -356,22 +356,24 @@ Mal sehen, ob all dies auf PythonAnywhere funktioniert. Zeit für ein weiteres B
 
 *   Als erstes, übergebe deinen neuen Code und lade ihn auf GitHub hoch
 
-    $ git status
-    $ git add -A .
-    $ git status
-    $ git commit -m "Added views to create/edit blog post inside the site."
-    $ git push
-
+```
+$ git status
+$ git add -A .
+$ git status
+$ git commit -m "Added views to create/edit blog post inside the site."
+$ git push
+```
 
 *   Dann, in einer [PythonAnywhere Bash Konsole](https://www.pythonanywhere.com/consoles/):
 
-    $ cd my-first-blog
-    $ source myvenv/bin/activate
-    (myvenv)$ git pull
-    [...]
-    (myvenv)$ python manage.py collectstatic
-    [...]
-
+```
+$ cd my-first-blog
+$ source myvenv/bin/activate
+(myvenv)$ git pull
+[...]
+(myvenv)$ python manage.py collectstatic
+[...]
+```
 
 *   Springe zum Ende noch schnell auf den [Web tab](https://www.pythonanywhere.com/web_app_setup/) und klicke auf **Reload**.
 
