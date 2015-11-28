@@ -183,13 +183,14 @@ Nachdem wir das gemacht haben, laden (push) wir unsere Änderungen auf GitHub:
 
 *   Öffne die [PythonAnywhere consoles page](https://www.pythonanywhere.com/consoles/) und gehe zu deiner **Bash Konsole** (oder starte eine neue). Dann, führe folgendes aus:
 
-    $ cd ~/my-first-blog
-    $ source myvenv/bin/activate
-    (myvenv)$ git pull
-    [...]
-    (myvenv)$ python manage.py collectstatic
-    [...]
-
+```
+$ cd ~/my-first-blog
+$ source myvenv/bin/activate
+(myvenv)$ git pull
+[...]
+(myvenv)$ python manage.py collectstatic
+[...]
+```
 
 Und schau zu wie dein Code runtergeladen wird. Wenn du prüfen willst ob der Code angekommen ist, kannst du zum **Files tab** rüberspringen und deinen Code auf PythonAnywhere sehen.
 
