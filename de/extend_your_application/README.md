@@ -152,22 +152,24 @@ Yeah! Es funktioniert!
 
 Es wäre schön zu sehen, ob deine Website noch auf PythonAnywhere funktioniert, richtig? Lass uns erneut Bereitstellen.
 
-    $ git status
-    $ git add -A .
-    $ git status
-    $ git commit -m "Added view and template for detailed blog post as well as CSS for the site."
-    $ git push
-
+```
+$ git status
+$ git add -A .
+$ git status
+$ git commit -m "Added view and template for detailed blog post as well as CSS for the site."
+$ git push
+```
 
 *   Dann, in einer [PythonAnywhere Bash Konsole](https://www.pythonanywhere.com/consoles/):
 
-    $ cd my-first-blog
-    $ source myvenv/bin/activate
-    (myvenv)$ git pull
-    [...]
-    (myvenv)$ python manage.py collectstatic
-    [...]
-
+```
+$ cd my-first-blog
+$ source myvenv/bin/activate
+(myvenv)$ git pull
+[...]
+(myvenv)$ python manage.py collectstatic
+[...]
+```
 
 *   Springe zum Ende noch schnell auf den [Web tab](https://www.pythonanywhere.com/web_app_setup/) und klicke auf **Reload**.
 
